@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/Hachimanx9x/Electronjs#readme",
   "dependencies": {
-    "electron": "^8.2.0"
+    "electron": "^8.2.4"
   }
 }
