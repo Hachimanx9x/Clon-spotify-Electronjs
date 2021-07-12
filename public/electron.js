@@ -1,10 +1,11 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Menu } = require("electron");
 const path = require("path");
 const isDev = require("electron-is-dev");
 
 let mainWindow;
 
 function createWindow() {
+  Menu.setApplicationMenu(false);
   //size for window
   mainWindow = new BrowserWindow({
     width: 1500,
