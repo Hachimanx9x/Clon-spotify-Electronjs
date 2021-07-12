@@ -1,0 +1,30 @@
+@import "../../../scss/index.scss";
+
+.o-auth-options {
+  margin-top: 50px;
+  h2 {
+    font-size: 40px;
+    color: $font-light;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.o-register,
+.o-login {
+  text-transform: uppercase !important;
+  width: 100% !important;
+  margin-top: 30px !important;
+  border-radius: 50px !important;
+  padding: 20px 0 !important;
+  font-size: 17px !important;
+  letter-spacing: 3px !important;
+}
+.o-register {
+  background-color: $primary-color !important;
+  color: $font-light !important;
+}
+.o-login {
+  background-color: $background-light !important;
+  color: $background-dark !important;
+}

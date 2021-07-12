@@ -1,0 +1,32 @@
+@import "../../../scss/index.scss";
+.ui.form.o-add-album-from {
+  .fields {
+    margin: 0 !important;
+    .o-album-avatar {
+      position: relative;
+      background-color: $background-grey-light;
+      height: 150px;
+      width: 100%;
+      padding: 0 !important;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+      .o-avatar {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+      }
+    }
+  }
+  .o-album-inputs {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}

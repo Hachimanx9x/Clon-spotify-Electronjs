@@ -1,0 +1,63 @@
+@import "../../../scss/index.scss";
+.o-songs-slider {
+  margin: 50px 0;
+  > h2 {
+    border-bottom: 1px solid $border-grey-light;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+
+  &__no-slide {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+  }
+
+  &__list {
+    .slick-prev {
+      left: 10px;
+      z-index: 2;
+    }
+    .slick-next {
+      right: 10px;
+      z-index: 2;
+    }
+    &-song {
+      padding: 2px;
+      .o-avatar {
+        height: 160px;
+        width: 100%;
+        max-width: 200px;
+        min-width: 130px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          cursor: pointer;
+          i.icon {
+            opacity: 1;
+          }
+        }
+        i.icon {
+          width: 100%;
+          opacity: 0;
+          transition: opacity 0.25s ease-in-out;
+          &:before {
+            font-size: 50px;
+            color: $font-light;
+          }
+        }
+      }
+
+      h3 {
+        color: $font-grey;
+        margin-top: 10px;
+        font-size: 16px;
+      }
+    }
+  }
+}

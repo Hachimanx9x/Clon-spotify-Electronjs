@@ -6,7 +6,17 @@ let mainWindow;
 
 function createWindow() {
   //size for window
-  mainWindow = new BrowserWindow({ width: 900, height: 680 });
+  mainWindow = new BrowserWindow({
+    width: 1500,
+    height: 1000,
+    resizable: false,
+
+    fullscreen: false,
+
+    title: "Clon de spotify (Musicfy)",
+
+    titleBarStyle: "hiddenInset",
+  });
   //load file
   mainWindow.loadURL(
     isDev

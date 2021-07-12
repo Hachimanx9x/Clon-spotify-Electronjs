@@ -1,21 +1,30 @@
 {
   "name": "clon-spoty",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "main": "src/electron.js",
+  "author": "Diego Bolaños",
+  "homepage": "./",
+  "main": "public/electron.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "electron-is-dev": "^2.0.0",
     "firebase": "^8.6.7",
+    "lodash": "^4.17.21",
     "node-sass": "4.14.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-dropzone": "^11.3.4",
+    "react-player": "^2.9.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-slick": "^0.28.1",
+    "react-toastify": "^7.0.4",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.3",
+    "slick-carousel": "^1.8.1",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -23,7 +32,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\""
+    "dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "electron-builder -c.extraMetadata.main=build/electron.js",
+    "preelectron-pack": "yarn build"
   },
   "eslintConfig": {
     "extends": [
@@ -48,5 +59,15 @@
     "electron": "^13.1.2",
     "electron-builder": "^22.10.5",
     "wait-on": "^5.3.0"
+  },
+  "build": {
+    "appId": "com.disegobolanos.clonspotify",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
   }
 }

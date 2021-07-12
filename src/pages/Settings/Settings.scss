@@ -1,0 +1,46 @@
+@import "../../scss/index.scss";
+
+.o-settings {
+  margin: 50px 100px 0 100px;
+  > h1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  .o-avatar-name {
+    display: flex;
+    align-items: center;
+    .o-user-avatar {
+      display: table;
+      margin: 0 !important;
+      border: 2px solid $border-grey;
+      border-style: dashed;
+      border-radius: 100px;
+      padding: 10px;
+      margin-bottom: 20px;
+
+      .ui.image {
+        width: 100px;
+        border-radius: 50px;
+      }
+    }
+    .o-user-name {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      h2 {
+        margin: 0 20px !important;
+      }
+    }
+  }
+  .o-user-email,
+  .o-user-password {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    h3 {
+      margin: 0px;
+    }
+  }
+}
